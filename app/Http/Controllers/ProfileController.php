@@ -38,11 +38,13 @@ class ProfileController extends Controller
 
         if ($request->avatar) {
             if (!empty($request->user()->avatar)) {
-                Storage::disk('public')->delete($request->user()->avatar);
+                // Storage::disk('public')->delete($request->user()->avatar);
+                Storage::disk(config('filesystems.default_public_disk'))->delete($request->user()->avatar);
             }
             $newFilename = Str::after($request->avatar, 'tmp/');
             $pathNewFilename = 'img/' . $newFilename;
-            Storage::disk('public')->move($request->avatar, $pathNewFilename);
+            // Storage::disk('public')->move($request->avatar, $pathNewFilename);
+            Storage::disk(config('filesystems.default_public_disk'))->move($request->avatar, $pathNewFilename);
             $validated['avatar'] = $pathNewFilename;
         }
         
@@ -75,7 +77,7 @@ class ProfileController extends Controller
             //     // Delete old avatar if exists
             //     Storage::disk('public')->delete($user->avatar);
             // }
-            $path = $request->file('avatar')->store('tmp', 'public');
+            $path = $request->file('avatar')->store('tmp', config('filesystems.default_public_disk'));
             // $request->file('avatar')->store('tmp', 'public');
             // $user->avatar = $path;
             // $user->save();
