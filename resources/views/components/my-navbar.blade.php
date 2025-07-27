@@ -10,7 +10,7 @@
             @if (Auth::check())
                 <button type="button" @click="isOpen = !isOpen" class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
                     <span class="sr-only">Open user menu</span>
-                    <img class="w-8 h-8 rounded-full" src="{{ 'storage/'. Auth::user()->avatar ? asset('storage/'. Auth::user()->avatar) : asset('storage/'. 'img/default.png') }}" alt="{{ Auth::user()->name }}">
+                    <img class="w-8 h-8 rounded-full" src="{{ Auth::user()->avatar ? asset('storage/'. Auth::user()->avatar) : asset('storage/'. 'img/default.png') }}" alt="{{ Auth::user()->name }}">
                 </button>
             @else
                 {{-- <a href="/login" class="text-gray-300 text-sm text-medium">Log in</a> --}}
