@@ -46,7 +46,7 @@
                         </defs>
                     </svg> --}}
                     <div class="mr-2 h-8" viewBox="0 0 33 33" fill="none">
-                        <img class="size-8" src="{{ asset('logo/logo.png') }}" alt="Your Company" />
+                        <img class="size-8" src="{{ asset('storage/'. 'logo/logo.png') }}" alt="Your Company" />
                     </div>
                     Codeqiu™
                 </a>

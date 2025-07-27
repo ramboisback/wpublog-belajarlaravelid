@@ -32,7 +32,7 @@
             {{ $posts->links() }}
             <div class="mt-4 grid gap-8 lg:grid-cols-2">
 
-                <article class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+                {{-- <article class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
                     <a href="#">
                         <img class="rounded-xl mb-4 border" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/blog/office-laptops.png" alt="office laptop working">
                     </a>
@@ -54,7 +54,7 @@
                             <div class="text-xs text-gray-500">Aug 15, 2021 · 16 min read</div>
                         </div>
                     </div>
-                </article>
+                </article> --}}
 
                 @forelse ($posts as $post)
                 <article class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
@@ -74,7 +74,7 @@
                     <div class="flex justify-between items-center">
                         <a href="/posts?author={{ $post->author->username }}">
                             <div class="flex items-center space-x-4">
-                                <img class="w-7 h-7 rounded-full" src="{{ $post->author->avatar ? asset('storage/'. $post->author->avatar) : asset('img/default.png') }}" alt="{{ $post->author->name }}" />
+                                <img class="w-7 h-7 rounded-full" src="{{ 'storage/'. $post->author->avatar ? asset('storage/'. $post->author->avatar) : asset('storage/'. 'img/default.png') }}" alt="{{ $post->author->name }}" />
                                 <span class="font-medium text-xs dark:text-white">
                                     {{ $post->author->name }}
                                 </span>

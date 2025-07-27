@@ -27,7 +27,7 @@
                     <x-slot name="trigger">
                         <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-hidden transition ease-in-out duration-150 cursor-pointer">
                             <div class="shrink-0">
-                                <img class="size-8 rounded-full mr-2" src="{{ Auth::user()->avatar ? asset('storage/'. Auth::user()->avatar) : asset('img/default.png') }}" alt="{{ Auth::user()->name }}" />
+                                <img class="size-8 rounded-full mr-2" src="{{ 'storage/'. Auth::user()->avatar ? asset('storage/'. Auth::user()->avatar) : asset('storage/'. 'img/default.png') }}" alt="{{ Auth::user()->name }}" />
                             </div>
                             <div>{{ Auth::user()->name }}</div>
 
@@ -81,7 +81,7 @@
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200 dark:border-gray-600">
              <div class="flex items-center px-4">
-                <img class="size-8 rounded-full" src="{{ Auth::user()->avatar ? asset('storage/'. Auth::user()->avatar) : asset('img/logo.png') }}" alt="{{ Auth::user()->name }}" />
+                <img class="size-8 rounded-full" src="{{ 'storage/'. Auth::user()->avatar ? asset('storage/'. Auth::user()->avatar) : asset('storage/'. 'img/logo.png') }}" alt="{{ Auth::user()->name }}" />
                 <div class="px-4">
                     <div class="font-medium text-base text-gray-800 dark:text-gray-200">{{ Auth::user()->name }}</div>
                     <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
