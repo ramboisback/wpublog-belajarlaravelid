@@ -15,7 +15,7 @@
         
         {{-- <x-navbar /> --}}
 
-        <x-my-navbar/>
+        <x-my-navbar />
 
         <x-header :nav="$nav" />
 

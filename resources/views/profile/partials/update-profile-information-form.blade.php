@@ -77,7 +77,7 @@
             <span class="text-gray-500 text-sm">Current avatar:</span>
             {{-- <img class="w-20 h-20 rounded-full" src="{{ $user->avatar ? asset('storage/'. $user->avatar) : asset('img/default.png') }}" alt="{{ $user->name }}'s avatar"> --}}
             {{-- <img id="avatar-preview" class="w-20 h-20 rounded-full" src="{{ $user->avatar ? asset('storage/'. $user->avatar) : asset('img/default.png') }}" alt="{{ $user->name }}'s avatar"> --}}
-            <img id="avatar-preview" class="w-20 h-20 rounded-full" src="{{ $user->avatar ? asset('storage/'. $user->avatar) : asset('storage/'. 'img/default.png') }}" alt="{{ $user->name }}'s avatar">
+            <img id="avatar-preview" class="w-20 h-20 rounded-full" src="{{ 'storage/'. $user->avatar ? asset('storage/'. $user->avatar) : asset('storage/'. 'img/default.png') }}" alt="{{ $user->name }}'s avatar">
             {{-- <img class="w-20 h-20 rounded-full" src="{{ $user->avatar ? asset('storage/'. $user->avatar) : asset('img/default.png') }}" alt="{{ $user->name }}'s avatar"> --}}
         </div>
 
